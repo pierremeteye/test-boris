@@ -1,0 +1,9 @@
+li {
+	cursor: pointer;
+	float: left;
+	margin-right: 50px;
+}
+
+.done {
+	text-decoration: line-through;
+}

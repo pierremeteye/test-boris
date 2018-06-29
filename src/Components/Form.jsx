@@ -6,23 +6,25 @@ class Form extends Component {
 		super(props)
 		this.state = {
 			value: '',
-			task: []
+			newTask: ''
 		}
-	}
-
-	onSubmit(e){
-		e.preventDefault();
-		this.setState(prevState => ({
-			task: [...prevState.task, this.state.value],
-			value: ''
-		}));
 	}
 
 	onChange(e){
 		this.setState({
-			value: e.target.value
+			value: e.target.value,
+			newTask: e.target.value
 		})
 	}
+
+	onSubmit(e){
+		e.preventDefault();
+		this.props.getTasks(this.state.newTask);
+		this.setState({
+			value: ''
+		});
+	}
+
 
     render(){
 		return <form onSubmit={this.onSubmit.bind(this)}>
