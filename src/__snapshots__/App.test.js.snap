@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <input
+    onChange={[Function]}
+    placeholder="Ajouter un nom"
+    type="text"
+    value=""
+  />
+  <input
+    type="submit"
+  />
+</form>
+`;
